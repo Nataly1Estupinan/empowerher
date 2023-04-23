@@ -17,20 +17,11 @@ const Derechos = () => {
                     }}
                 >
                     <ul style={{ listStyle: 'none' }}>
-                        <li><input type="checkbox" id="item1" name="item1" value="value1" style={{ marginRight: '10px' }} /><label for="item1">Gratis</label></li>
-                        <li><input type="checkbox" id="item2" name="item2" value="value2" style={{ marginRight: '10px' }} /><label for="item2">De pago</label></li>
-
+                        <li><label for="item3">Abogados</label></li>
+                        <hr />
+                        <li><input type="checkbox" id="item4" name="item4" value="value4" style={{ marginRight: '10px' }} /><label for="item4">Sec. Público</label></li>
+                        <li><input type="checkbox" id="item5" name="item5" value="value5" style={{ marginRight: '10px' }} /><label for="item5">Sec. Privado</label></li>
                     </ul>
-                    <hr />
-                    <ul style={{ listStyle: 'none' }}>
-                        <li><input type="checkbox" id="item3" name="item3" value="value3" style={{ marginRight: '10px' }} /><label for="item3">Tecnología</label></li>
-                        <li><input type="checkbox" id="item4" name="item4" value="value4" style={{ marginRight: '10px' }} /><label for="item4">Contaduría</label></li>
-                        <li><input type="checkbox" id="item5" name="item5" value="value5" style={{ marginRight: '10px' }} /><label for="item5">Derecho</label></li>
-                        <li><input type="checkbox" id="item6" name="item6" value="value6" style={{ marginRight: '10px' }} /><label for="item6">Deportes</label></li>
-                        <li><input type="checkbox" id="item7" name="item6" value="value7" style={{ marginRight: '10px' }} /><label for="item7">Áreas de la salud</label></li>
-
-                    </ul>
-                    <hr />
                 </Card>
             </div>
             <div style={{ width: '80%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', margin: 'auto' }}>
