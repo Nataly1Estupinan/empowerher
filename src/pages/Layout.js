@@ -57,7 +57,7 @@ const Layout = () => {
 };
 
 const navStyle = {
-  backgroundColor: "#D672C3",
+  backgroundColor: "#4E2F48",
   opacity:'0.8',
   display: "flex",
   justifyContent: "center",

@@ -91,7 +91,7 @@ const RegisterForm = () => {
         </Form.Item>
 
         <Form.Item >
-          <Button style={{backgroundColor:'#D672C3'}}type="primary" htmlType="submit" >
+          <Button style={{backgroundColor:'#4E2F48'}}type="primary" htmlType="submit" >
             Registrar
           </Button>
         </Form.Item>
@@ -141,7 +141,7 @@ const LoginForm = () => {
       </Form.Item>
 
       <Form.Item >
-        <Button style={{backgroundColor:'#D672C3'}}type="primary" htmlType="submit">
+        <Button style={{backgroundColor:'#4E2F48'}}type="primary" htmlType="submit">
         <Link to="/educacion" style={{color: 'white'}}>
           Ingresar
           </Link>

@@ -7,6 +7,7 @@ import { PlusCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Meta from "antd/es/card/Meta";
 import apps from './data.json';
+import Preferencias from "./Preferencias";
 
 const Noticias = () => {
 
@@ -21,19 +22,20 @@ const Noticias = () => {
         setIsModalOpen(false);
     };
     return (
-        <> <div style={{textAlign:'center', width:'200px', marginLeft:'900px', paddingBottom:'10px'}}>
+        <> <div style={{ textAlign: 'center', width: '200px', marginLeft: '900px', paddingBottom: '10px' }}>
             <Link onClick={showModal}>
                 <PlusCircleOutlined />Agregar preferencias
             </Link>
-            <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+            <Modal title="Tus preferencias" open={isModalOpen} onOk={handleOk}
+                okButtonProps={{ style: { backgroundColor: '#4E2F48',color:'white' } }}
+                bodyStyle={{ boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)' }}
+                onCancel={handleCancel}>
+                <Preferencias />
             </Modal>
         </div>
             <Row justify="center">
 
-                <Carousel autoplay style={{ width: '800px', height: '300px', backgroundColor: '#D672C3' }}>
+                <Carousel autoplay style={{ width: '800px', height: '300px', }}>
 
                     <div>
 
@@ -54,28 +56,28 @@ const Noticias = () => {
                 </Carousel>
             </Row>
 
-            <div style={{ with: '100%', display: 'flex', gap: '30px', marginTop:'130px' }} >
-           
-            <div style={{ width: '80%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', margin: 'auto' }}>
-                {apps.map((app) => (
-                    <Card
-                        key={app.id}
-                        hoverable
-                        style={{
-                            width: '30%',
-                            display: 'flex',
-                            marginBottom: '30px',
-                            alignItems: 'center',
-                            boxShadow:' 0px 0px 59px -24px rgba(194,160,234,0.82)'
-                        }}
-                        cover={<img alt="example" src={app.img} style={{ width: '100px', height: '100px', margin: 'auto', objectFit: 'cover' }} />}
-                    >
-                        <Meta title={app.name} description={app.description} />
-                    </Card>
-                ))}
-            </div>
+            <div style={{ with: '100%', display: 'flex', gap: '30px', marginTop: '130px' }} >
 
-        </div>
+                <div style={{ width: '80%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', margin: 'auto' }}>
+                    {apps.map((app) => (
+                        <Card
+                            key={app.id}
+                            hoverable
+                            style={{
+                                width: '30%',
+                                display: 'flex',
+                                marginBottom: '30px',
+                                alignItems: 'center',
+                                boxShadow: ' 0px 0px 59px -24px rgba(194,160,234,0.82)'
+                            }}
+                            cover={<img alt="example" src={app.img} style={{ width: '100px', height: '100px', margin: 'auto', objectFit: 'cover' }} />}
+                        >
+                            <Meta title={app.name} description={app.description} />
+                        </Card>
+                    ))}
+                </div>
+
+            </div>
         </>
     );
 }
