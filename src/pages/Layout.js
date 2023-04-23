@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div>
       <Menu mode="horizontal" style={navStyle}>
-      
+
         <Menu.Item key="inicio" style={menuItemStyle}>
           <Link to="/" style={linkStyle}>
             Inicio
@@ -30,7 +30,7 @@ const Layout = () => {
         </Menu.Item>
         <Menu.Item key="acoso" style={menuItemStyle}>
           <Link to="/acoso" style={linkStyle}>
-            Acoso sexual
+            Violencia de género
           </Link>
         </Menu.Item>
         <Menu.Item key="derechos" style={menuItemStyle}>
@@ -40,7 +40,7 @@ const Layout = () => {
         </Menu.Item>
         <Menu.Item key="apoyo" style={menuItemStyle}>
           <Link to="/apoyo" style={linkStyle}>
-            <Apoyo/>
+            <Apoyo />
           </Link>
         </Menu.Item>
         <Menu.Item key="red" style={menuItemStyle}>
@@ -58,7 +58,7 @@ const Layout = () => {
 
 const navStyle = {
   backgroundColor: "#4E2F48",
-  opacity:'0.8',
+  opacity: '0.8',
   display: "flex",
   justifyContent: "center",
 };

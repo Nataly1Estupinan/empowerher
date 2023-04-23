@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'antd';
 import apps from './data.json';
+import { Link } from 'react-router-dom';
 const { Meta } = Card;
 
 
@@ -13,7 +14,7 @@ const Transporte = () => {
                     bordered={false}
                     style={{
                         width: 220,
-                        boxShadow:' 0px 0px 59px -24px rgba(194,160,234,0.82)'
+                        boxShadow: ' 0px 0px 59px -24px rgba(194,160,234,0.82)'
                     }}
                 >
                     <ul style={{ listStyle: 'none' }}>
@@ -35,15 +36,25 @@ const Transporte = () => {
                     <Card
                         key={app.id}
                         hoverable
+                        title
                         style={{
                             width: '30%',
                             display: 'flex',
                             marginBottom: '30px',
                             alignItems: 'center',
-                            boxShadow:' 0px 0px 59px -24px rgba(194,160,234,0.82)'
-
+                            boxShadow: ' 0px 0px 59px -24px rgba(194,160,234,0.82)'
                         }}
-                        cover={<img alt="example" src={app.img} style={{ width: '100px', height: '100px', margin: 'auto', objectFit: 'cover' }} />}
+                        cover={
+                            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Link to={app.link} target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        alt="example"
+                                        src={app.img}
+                                        style={{ width: '100px', height: '100px', margin: 'auto', objectFit: 'cover' }}
+                                    />
+                                </Link>
+                            </div>
+                        }
                     >
                         <Meta title={app.name} description={app.description} />
                     </Card>

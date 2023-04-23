@@ -91,7 +91,7 @@ const RegisterForm = () => {
         </Form.Item>
 
         <Form.Item >
-          <Button style={{backgroundColor:'#4E2F48'}}type="primary" htmlType="submit" >
+          <Button style={{ backgroundColor: '#4E2F48' }} type="primary" htmlType="submit" >
             Registrar
           </Button>
         </Form.Item>
@@ -141,9 +141,9 @@ const LoginForm = () => {
       </Form.Item>
 
       <Form.Item >
-        <Button style={{backgroundColor:'#4E2F48'}}type="primary" htmlType="submit">
-        <Link to="/educacion" style={{color: 'white'}}>
-          Ingresar
+        <Button style={{ backgroundColor: '#4E2F48' }} type="primary" htmlType="submit">
+          <Link to="/educacion" style={{ color: 'white' }}>
+            Ingresar
           </Link>
         </Button>
       </Form.Item>
@@ -164,30 +164,32 @@ const LoginRegisterPage = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-around",
           alignItems: "center",
           padding: '10px',
         }}>
         <div style={{ width: '50%', paddingRight: '3rem' }}>
           <img src={imgInicio}
-            style={{ width: '100%', height: '80vh',borderRadius:'40px', objectFit:'cover' }}></img>
+            style={{ width: '100%', height: '80vh', borderRadius: '40px', objectFit: 'cover' }}></img>
         </div>
-       <div style={{width:'37%',position:'absolute', top:'60px', left:'950px'}}>
-        <img src={logo} style={{width:'30%'}}></img>
-       </div>
-        <Card
-          style={{
-            width: '45%',
-            height: '300px;',
-            boxShadow: '0px 0px 400px 52px rgba(194,160,234,0.82)',
-            
-          }}>
-        {isLoginForm ? <LoginForm /> : <RegisterForm />}
-        <Button onClick={handleToggleForm}>
-          {isLoginForm ? 'Registrar' : 'Ingresar'}
-        </Button>
-      </Card>
-    </div>
+        <div style={{ width: '40%' }}>
+          <div style={{ margin: 'auto', top: '60px', display: 'flex', justifyContent: 'center' }}>
+            <img src={logo} style={{ width: '30%' }}></img>
+          </div>
+          <Card
+            style={{
+              width: '100%',
+              height: '300px;',
+              boxShadow: '0px 0px 400px 52px rgba(194,160,234,0.82)',
+
+            }}>
+            {isLoginForm ? <LoginForm /> : <RegisterForm />}
+            <Button onClick={handleToggleForm}>
+              {isLoginForm ? 'Registrar' : 'Ingresar'}
+            </Button>
+          </Card>
+        </div>
+      </div>
     </div >
   );
 };
