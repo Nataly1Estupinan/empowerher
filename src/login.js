@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, Card } from 'antd';
 
 const RegisterForm = () => {
   const [form] = Form.useForm();
@@ -150,11 +150,22 @@ const LoginRegisterPage = () => {
   };
 
   return (
-    <div>
-      {isLoginForm ? <LoginForm /> : <RegisterForm />}
-      <Button onClick={handleToggleForm}>
-        {isLoginForm ? 'Register' : 'Log in'}
-      </Button>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        
+      }}>
+      <Card
+        style={{
+          width: 300,
+        }}>
+        {isLoginForm ? <LoginForm /> : <RegisterForm />}
+        <Button onClick={handleToggleForm}>
+          {isLoginForm ? 'Register' : 'Log in'}
+        </Button>
+      </Card>
     </div>
   );
 };

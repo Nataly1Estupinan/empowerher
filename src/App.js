@@ -8,16 +8,23 @@ import Educacion from './pages/Educacion';
 import Transporte from './pages/Transporte';
 import Inicio from './pages/Inicio';
 import Layout from './pages/Layout';
+import Acoso from './pages/Acoso';
+import Derechos from './pages/derechos';
+import Apoyo from './pages/apoyo';
+import RedApoyo from './pages/RedApoyo';
 function App() {
   return (
     <div>
-      <h1>Routes</h1>
       <Routes>
         <Route path="/" element={<Layout />}>
+        <Route path="/" element={<LoginRegisterPage />} />
           <Route path="transporte" element={<Transporte />} />
-          <Route path="/" element={<LoginRegisterPage />} />
-          <Route path="educacion" element={<Component1 />} />
           
+          <Route path="educacion" element={<Component1 />} />
+          <Route path="acoso" element={<Acoso />} />
+          <Route path="/derechos" element={<Derechos />} />
+          <Route path="apoyo" element={<Apoyo />} />
+          <Route path="red" element={<RedApoyo />} />
         </Route>
       </Routes>
     </div>

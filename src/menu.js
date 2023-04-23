@@ -60,7 +60,6 @@ const MyComponent = () => {
             background: colorBgContainer,
           }}
         >
-         
           </Content>
       </Layout>
     </Layout>
