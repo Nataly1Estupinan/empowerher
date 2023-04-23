@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, Card } from 'antd';
+import imgInicio from './assets/imgInicio.jpg'
+import { Link } from 'react-router-dom';
+import logo from './assets/logo.png';
 
 const RegisterForm = () => {
   const [form] = Form.useForm();
@@ -9,87 +12,91 @@ const RegisterForm = () => {
   };
 
   return (
-    <Form
-      form={form}
-      name="register-form"
-      onFinish={onFinish}
-      scrollToFirstError
-    >
-      <Form.Item
-        name="usuario"
-        label="Usuario"
-        rules={[
-          {
-            required: true,
-            message: 'Por favor ingresa tu usuario!',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
 
-      <Form.Item
-        name="password"
-        label="Contraseña"
-        rules={[
-          {
-            required: true,
-            message: 'Por favor ingresa tu contraseña!',
-          },
-        ]}
-        hasFeedback
-      >
-        <Input.Password />
-      </Form.Item>
+    <>
 
-      <Form.Item
-        name="confirm"
-        label="Confirmar contraseña"
-        dependencies={['password']}
-        hasFeedback
-        rules={[
-          {
-            required: true,
-            message: 'Por favor confirma tu contraseña!',
-          },
-          ({ getFieldValue }) => ({
-            validator(_, value) {
-              if (!value || getFieldValue('password') === value) {
-                return Promise.resolve();
-              }
-              return Promise.reject(
-                new Error('Las contraseñas no coinciden!')
-              );
+      <Form
+        form={form}
+        name="register-form"
+        onFinish={onFinish}
+        scrollToFirstError
+      >
+        <Form.Item
+          name="usuario"
+          label="Usuario"
+          rules={[
+            {
+              required: true,
+              message: 'Por favor ingresa tu usuario!',
             },
-          }),
-        ]}
-      >
-        <Input.Password />
-      </Form.Item>
+          ]}
+        >
+          <Input />
+        </Form.Item>
 
-      <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value
-                ? Promise.resolve()
-                : Promise.reject(new Error('Should accept agreement')),
-          },
-        ]}
-      >
-        <Checkbox>
-        He leído y acepto el <a href="/">acuerdo</a>
-        </Checkbox>
-      </Form.Item>
+        <Form.Item
+          name="password"
+          label="Contraseña"
+          rules={[
+            {
+              required: true,
+              message: 'Por favor ingresa tu contraseña!',
+            },
+          ]}
+          hasFeedback
+        >
+          <Input.Password />
+        </Form.Item>
 
-      <Form.Item >
-        <Button type="primary" htmlType="submit">
-          Registrar
-        </Button>
-      </Form.Item>
-    </Form>
+        <Form.Item
+          name="confirm"
+          label="Confirmar contraseña"
+          dependencies={['password']}
+          hasFeedback
+          rules={[
+            {
+              required: true,
+              message: 'Por favor confirma tu contraseña!',
+            },
+            ({ getFieldValue }) => ({
+              validator(_, value) {
+                if (!value || getFieldValue('password') === value) {
+                  return Promise.resolve();
+                }
+                return Promise.reject(
+                  new Error('Las contraseñas no coinciden!')
+                );
+              },
+            }),
+          ]}
+        >
+          <Input.Password />
+        </Form.Item>
+
+        <Form.Item
+          name="agreement"
+          valuePropName="checked"
+          rules={[
+            {
+              validator: (_, value) =>
+                value
+                  ? Promise.resolve()
+                  : Promise.reject(new Error('Should accept agreement')),
+            },
+          ]}
+        >
+          <Checkbox>
+            He leído y acepto el <a href="/">acuerdo</a>
+          </Checkbox>
+        </Form.Item>
+
+        <Form.Item >
+          <Button style={{backgroundColor:'#D672C3'}}type="primary" htmlType="submit" >
+            Registrar
+          </Button>
+        </Form.Item>
+      </Form>
+    </>
   );
 };
 
@@ -134,8 +141,10 @@ const LoginForm = () => {
       </Form.Item>
 
       <Form.Item >
-        <Button type="primary" htmlType="submit">
+        <Button style={{backgroundColor:'#D672C3'}}type="primary" htmlType="submit">
+        <Link to="/educacion" style={{color: 'white'}}>
           Ingresar
+          </Link>
         </Button>
       </Form.Item>
     </Form>
@@ -150,23 +159,36 @@ const LoginRegisterPage = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        
-      }}>
-      <Card
+    <div>
+
+      <div
         style={{
-          width: 300,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: '10px',
         }}>
+        <div style={{ width: '50%', paddingRight: '3rem' }}>
+          <img src={imgInicio}
+            style={{ width: '100%', height: '80vh',borderRadius:'40px', objectFit:'cover' }}></img>
+        </div>
+       <div style={{width:'37%',position:'absolute', top:'60px', left:'950px'}}>
+        <img src={logo} style={{width:'30%'}}></img>
+       </div>
+        <Card
+          style={{
+            width: '45%',
+            height: '300px;',
+            boxShadow: '0px 0px 400px 52px rgba(194,160,234,0.82)',
+            
+          }}>
         {isLoginForm ? <LoginForm /> : <RegisterForm />}
         <Button onClick={handleToggleForm}>
           {isLoginForm ? 'Registrar' : 'Ingresar'}
         </Button>
       </Card>
     </div>
+    </div >
   );
 };
 

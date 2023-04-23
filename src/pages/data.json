@@ -1,0 +1,68 @@
+[
+    {
+        "link": "https://ursafe.com",
+        "category": "1",
+        "description": "Primer y único dispositivo de seguridad personal de manos libres, activado por voz. App de seguridad integrado con el 911.",
+        "name": "UrSafe",
+        "id_partner": "",
+        "created_at": "",
+        "updated_at": "",
+        "img": "https://www.globaldatinginsights.com/wp-content/uploads/2020/08/Purple-logo-no-background-copy-1024x973.png",
+        "id": "1"
+    },
+    {
+        "link": "https://play.google.com/store/apps/details?id=com.ubercab&hl=en_US",
+        "category": "1",
+        "description": "Juntas Al Volante tiene como propósito unificar, fortalecer y enriquecer la comunidad de mujeres que utilizan la app de Uber.",
+        "name": "Juntas Al Volante",
+        "id_partner": "",
+        "created_at": "",
+        "updated_at": "",
+        "img": "https://blog.uber-cdn.com/wp-content/uploads/2020/09/BLOG_Women-Empowerment-Platform-08.png",
+        "id": "2"
+    },
+    {
+        "link": "https://play.google.com/store/apps/details?id=com.sara.passenger&hl=en_US",
+        "category": "1",
+        "description": "Toda mujer que solicita una Sara recibe información detallada de su conductor, con su nombre, foto y número de patente.",
+        "name": "SaraLT Pasajera",
+        "id_partner": "",
+        "created_at": "",
+        "updated_at": "",
+        "img": "https://culturageek.com.ar/wp-content/uploads/2019/02/Culturageek.com_.ar-SARA-LT-App-mujeres-conductoras-Android-iOS-12.jpg",
+        "id": "3"
+    },
+    {
+        "link": "https://diaconia.es/desactivalatrata/?gclid=Cj0KCQjwi46iBhDyARIsAE3nVrYxctUp7zaQmYFhx-NsM2ZVtA0czmpiarsu1OTXrgV3xCOFLTjBQYcaAipTEALw_wcB",
+        "category": "2",
+        "description": "#DESACTIVALATRATA es un proyecto de Diaconía España que persigue la prevención contra la trata de personas, conocida como .",
+        "name": "DESACTIVALATRATA",
+        "id_partner": "",
+        "created_at": "",
+        "updated_at": "",
+        "img": "https://pbs.twimg.com/profile_images/1623356603964555265/xelxpMQ7_400x400.jpg",
+        "id": "4"
+    },
+    {
+        "link": "https://remar.org/atencion-a-la-mujer/?gad=1&gclid=Cj0KCQjwi46iBhDyARIsAE3nVrZioA6_6ZKqXNKjKB4gV5WNmkwAPPfki5iKGYN5vMu2uNJBMpk7jgEaAi7OEALw_wcB",
+        "category": "2",
+        "description": "Conociendo la realidad de la existencia de mujeres en situaciones extremas, debido a circunstancias diversas, nuestra asociación.",
+        "name": "Hogares acogida",
+        "id_partner": "",
+        "created_at": "",
+        "updated_at": "",
+        "img": "https://www-images.christianitytoday.com/images/130288.png",
+        "id": "5"
+    },
+    {
+        "link": "https://play.google.com/store/apps/details?id=com.artech.appinfoemp.informativo&hl=es_419&gl=US",
+        "category": "2",
+        "description": "La aplicación Junt@s CNT busca prevenir la violencia contra las mujeres, dotándoles de información y funcionalidades que les ayuden tanto a las víctimas, ",
+        "name": "Junt@s",
+        "id_partner": "",
+        "created_at": "",
+        "updated_at": "",
+        "img": "https://play-lh.googleusercontent.com/VvG3TnnN2v933i1PR6WNulMbWfEEBz5aCgFX9Vz8z6o_snG0i4w0t-zJuBldFv59DS0",
+        "id": "6"
+    }
+]

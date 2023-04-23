@@ -12,6 +12,7 @@ import Acoso from './pages/Acoso';
 import Derechos from './pages/derechos';
 import Apoyo from './pages/apoyo';
 import RedApoyo from './pages/RedApoyo';
+import Noticias from './pages/Noticias';
 function App() {
   return (
     <div>
@@ -19,8 +20,8 @@ function App() {
         <Route path="/" element={<Layout />}>
         <Route path="/" element={<LoginRegisterPage />} />
           <Route path="transporte" element={<Transporte />} />
-          
-          <Route path="educacion" element={<Component1 />} />
+          <Route path="noticias" element={<Noticias />} />
+          <Route path="educacion" element={<Educacion />} />
           <Route path="acoso" element={<Acoso />} />
           <Route path="derechos" element={<Derechos />} />
           <Route path="apoyo" element={<Apoyo />} />
