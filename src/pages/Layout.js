@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Menu } from "antd";
+import Apoyo from "./apoyo";
 
 const Layout = () => {
   return (
@@ -33,7 +34,7 @@ const Layout = () => {
         </Menu.Item>
         <Menu.Item key="apoyo" style={menuItemStyle}>
           <Link to="/apoyo" style={linkStyle}>
-            Apoyo emocional
+            <Apoyo/>
           </Link>
         </Menu.Item>
         <Menu.Item key="red" style={menuItemStyle}>
@@ -50,7 +51,7 @@ const Layout = () => {
 };
 
 const navStyle = {
-  backgroundColor: "pink",
+  backgroundColor: "#4E3E6D",
   display: "flex",
   justifyContent: "center",
 };

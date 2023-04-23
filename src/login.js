@@ -16,12 +16,12 @@ const RegisterForm = () => {
       scrollToFirstError
     >
       <Form.Item
-        name="username"
-        label="Username"
+        name="usuario"
+        label="Usuario"
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Por favor ingresa tu usuario!',
           },
         ]}
       >
@@ -30,11 +30,11 @@ const RegisterForm = () => {
 
       <Form.Item
         name="password"
-        label="Password"
+        label="Contraseña"
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Por favor ingresa tu contraseña!',
           },
         ]}
         hasFeedback
@@ -44,13 +44,13 @@ const RegisterForm = () => {
 
       <Form.Item
         name="confirm"
-        label="Confirm Password"
+        label="Confirmar contraseña"
         dependencies={['password']}
         hasFeedback
         rules={[
           {
             required: true,
-            message: 'Please confirm your password!',
+            message: 'Por favor confirma tu contraseña!',
           },
           ({ getFieldValue }) => ({
             validator(_, value) {
@@ -58,7 +58,7 @@ const RegisterForm = () => {
                 return Promise.resolve();
               }
               return Promise.reject(
-                new Error('The two passwords do not match!')
+                new Error('Las contraseñas no coinciden!')
               );
             },
           }),
@@ -80,13 +80,13 @@ const RegisterForm = () => {
         ]}
       >
         <Checkbox>
-          I have read the <a href="/">agreement</a>
+        He leído y acepto el <a href="/">acuerdo</a>
         </Checkbox>
       </Form.Item>
 
-      <Form.Item>
+      <Form.Item >
         <Button type="primary" htmlType="submit">
-          Register
+          Registrar
         </Button>
       </Form.Item>
     </Form>
@@ -108,12 +108,12 @@ const LoginForm = () => {
       scrollToFirstError
     >
       <Form.Item
-        name="username"
-        label="Username"
+        name="usuario"
+        label="Usuario"
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Por favor escribe tu usuario!',
           },
         ]}
       >
@@ -122,20 +122,20 @@ const LoginForm = () => {
 
       <Form.Item
         name="password"
-        label="Password"
+        label="Contraseña"
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Por favor ingresa tu contraseña!',
           },
         ]}
       >
         <Input.Password />
       </Form.Item>
 
-      <Form.Item>
+      <Form.Item >
         <Button type="primary" htmlType="submit">
-          Log in
+          Ingresar
         </Button>
       </Form.Item>
     </Form>
@@ -163,7 +163,7 @@ const LoginRegisterPage = () => {
         }}>
         {isLoginForm ? <LoginForm /> : <RegisterForm />}
         <Button onClick={handleToggleForm}>
-          {isLoginForm ? 'Register' : 'Log in'}
+          {isLoginForm ? 'Registrar' : 'Ingresar'}
         </Button>
       </Card>
     </div>

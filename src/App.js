@@ -22,7 +22,7 @@ function App() {
           
           <Route path="educacion" element={<Component1 />} />
           <Route path="acoso" element={<Acoso />} />
-          <Route path="/derechos" element={<Derechos />} />
+          <Route path="derechos" element={<Derechos />} />
           <Route path="apoyo" element={<Apoyo />} />
           <Route path="red" element={<RedApoyo />} />
         </Route>
